@@ -210,6 +210,7 @@ body {
 .work .item:not(:last-child) {
   margin-right: 30px;
 }
+
 .comand {
   background-color: #f5f4fa;
 }
@@ -318,17 +319,37 @@ body {
   background-color: #e5e5e5;
   justify-content: center;
   align-items: center;
+  fill: #afb1b8;
+}
+
+.client-logo:hover,
+.client-logo:focus {
+  border: solid #2196f3;
+  fill: #2196f3;
 }
 
 .link {
+  display: flex;
+  width: 370px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+
   color: #ffffff;
   background-color: rgba(47, 48, 58, 0.8);
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
+
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.do {
+  position: relative;
 }
 
 .link:hover,
@@ -519,7 +540,16 @@ footer {
   line-height: 1.87;
 }
 
+.cards-ovarlay {
+  position: relative;
+}
+
 .section-textps {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 370px;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 63px 24px;
@@ -529,6 +559,10 @@ footer {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.56;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sections {
   padding: 20px 24px;
@@ -553,4 +587,8 @@ footer {
 .cards:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.cards:hover .section-textps {
+  opacity: 1;
 }
