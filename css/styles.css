@@ -103,6 +103,9 @@ body {
 }
 
 .link-navs {
+  display: flex;
+  align-items: center;
+
   margin: 0px;
   color: #757575;
   font-weight: 500;
